@@ -33,3 +33,23 @@ Descargar TensorFlow Object Detection API --> git clone --depth 1 https://github
 
 # Uso:
 
+Para inicializar la herramienta, lo primero que habrá que hacer será crear un catkin workspace. En la carpeta src de dicho workspace, habrá que añadir la carpeta image_publish que se encuentra en este repositorio.
+
+En el script imagePublisher.py (que también se encuentra en la carpeta image_publish) hay que modificar la siguiente linea:
+
+  sys.path.insert(1, '/home/roberott/Desktop/prueba')
+  
+Habrá que poner la ruta del script object_Detection_TF.py, esto es necesario ya que lo más práctico, y lo que hemos hecho nosotros es tener dicho script en un virtual enviroment con tensorflow instalado. 
+
+Una vez esté hecho todo lo anterior, solamente tendremos que introducir los siguientes comandos:
+  
+  source devel/setup.bash o source devel/setup.zsh (depende del intérprete de comandos que utilicemos)
+  
+  roslaunch image_publish image_publisher.launch bag_file:="ruta_archivo_bag" image:="topico"
+  
+  Ejemplo:
+  
+  roslaunch image_publish image_publisher.launch bag_file:=/home/roberott/Downloads/coche_personas.bag image:=cv_camera/image_raw/
+
+Una vez hecho esto, la herramienta se inicializará, seleccionará la GPU automáticamente y empezará la identificación de objetos en el bag específicado.
+
