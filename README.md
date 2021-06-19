@@ -5,6 +5,8 @@ Esta herramienta utiliza TensorFlow para identificar objetos de interés en las 
 
 Para ello, se ha utilizado el siguiente modelo --> https://www.tensorflow.org/hub/tutorials/tf2_object_detection?hl=en
 
+Es normal que la herramienta se demore un poco en la primera vez que se ejecuta.
+
 # Requisitos
 
 Esta herramienta requiere las siguientes librerías:
