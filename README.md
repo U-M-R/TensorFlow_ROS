@@ -30,3 +30,6 @@ Esta herramienta requiere las siguientes librerías:
   -tensorflow_hub
   
 Descargar TensorFlow Object Detection API --> git clone --depth 1 https://github.com/tensorflow/models
+
+# Uso:
+
