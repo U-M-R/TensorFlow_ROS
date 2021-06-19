@@ -41,6 +41,12 @@ En el script imagePublisher.py (que también se encuentra en la carpeta image_pu
   
 Habrá que poner la ruta del script object_Detection_TF.py, esto es necesario ya que lo más práctico, y lo que hemos hecho nosotros es tener dicho script en un virtual enviroment con tensorflow instalado. 
 
+Del script object_Detection_TF.py habrá que modificar la siguiente linea:
+
+PATH_TO_LABELS = '/home/roberott/Desktop/prueba/models/research/object_detection/data/mscoco_label_map.pbtxt'
+
+Hay que poner la ruta al mscoco_label_map.pbtxt que se descargó del repositorio de tensorflow.
+
 Una vez esté hecho todo lo anterior, solamente tendremos que introducir los siguientes comandos:
   
   source devel/setup.bash o source devel/setup.zsh (depende del intérprete de comandos que utilicemos)
