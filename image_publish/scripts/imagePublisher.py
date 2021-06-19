@@ -22,7 +22,7 @@ from sensor_msgs.msg import CompressedImage
 import sys
 sys.path.insert(1, '/home/roberott/Desktop/prueba')
 
-import object_detectionTF
+import object_detection_TF
 from models import *
  
 VERBOSE=False
@@ -31,7 +31,7 @@ class image_feature:
 
     def __init__(self):
         
-        self.ob = object_detectionTF.image_identifier()
+        self.ob = object_detection_TF.image_identifier()
         # topic where we publish
         self.image_pub = rospy.Publisher("/output/image_raw/compressed", CompressedImage, queue_size=10)
 
